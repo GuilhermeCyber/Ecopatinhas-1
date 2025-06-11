@@ -1,5 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Reset and base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+header {
+    background-color: #783a04;
+    color: white;
+    padding: 12px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.nav-links a {
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-enter {
+    background-color: #ff7600;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enter:hover,
+.btn-enter:focus {
+    background-color: #cc5f00;
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* MOBILE NAV */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: #783a04;
+    padding: 8px 24px;
+}
+
+.mobile-nav a {
+    padding: 12px 0;
+    font-weight: 700;
+    border-bottom: 1px solid #994d00;
+}
+
+/* MAIN CONTENT */
+main {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:
+        url('./img/Banner\ site.png') center / cover no-repeat;
+    filter: brightness(0.85);
+   
+
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #ff76001a;
+    /* subtle warm overlay */
+    z-index: 0;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    width: 100%;
+    padding: 48px 24px 100px;
+    text-align: center;
+}
+
+/* Logo - svg color block with text */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.logo svg {
+    width: 72px;
+    height: 72px;
+    fill: #ff7600;
+    stroke: #000;
+    stroke-width: 1.5;
+}
+
+.logo-text {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2rem;
+    color: black;
+    user-select: none;
+}
+
+/* Welcome text */
+.welcome-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: black;
+    user-select: none;
+}
+
+/* Search bar with icon */
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 12px 48px 12px 48px;
+    border-radius: 16px;
+    border: none;
+    font-size: 1rem;
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+.search-container input[type="text"]:focus {
+    outline: 2px solid #ff7600;
+}
+
+.material-icons.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #783a04;
+    font-size: 24px;
+    pointer-events: none;
+}
+
+/* Dog images */
+.dog-images {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.dog-left,
+.dog-right {
+    width: 180px;
+    max-width: 20vw;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+    border-radius: 12px;
+}
+
+/* Bottom pattern bar */
+footer {
+    background:
+        url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/827e7c16-214e-4752-9b6f-2fdcd130b22a.png') center / cover no-repeat;
+    height: 120px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Responsive */
+
+/* Mobile */
+@media (max-width: 767px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .mobile-nav.show {
+        display: flex;
+    }
+
+    .dog-left,
+    .dog-right {
+        display: none;
+    }
+
+    .content-wrapper {
+        padding: 24px 12px 80px;
+    }
+}
+
+/* Desktop and up */
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none !important;
+    }
 }
