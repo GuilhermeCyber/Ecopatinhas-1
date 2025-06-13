@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="script.js">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ecopatinhas</title>
 
-<!--------------------iNTRODUÇÃO---------------------- -->
+    <!--------------------iNTRODUÇÃO---------------------- -->
 </head>
+<link href="./Font/Shrikhand/Shrikhand-Regular.ttf" rel="Shrikhand" />
+<head>
+
 <body>
     <header>
         <div class="header-container" role="navigation" aria-label="Menu principal">
-            <div aria-label="Logotipo Ecopatinhas" role="img"
-                style="font-family:'Roboto Slab', serif; font-weight:700; font-style:italic; font-size:1.5rem; color:white; user-select:none;">
-                Ecopatinhas
+            <div
+                style="font-family:'Shrikhand', serif; font-weight:700; font-style:italic; font-size:1.5rem; color:white; user-select:none;">
             </div>
             <nav class="nav-links">
                 <a href="#sobre" tabindex="0">Sobre nós</a>
@@ -21,16 +25,7 @@
                 <a href="#contato" tabindex="0">Contato</a>
                 <a href="#entrar" class="btn-enter" tabindex="0">Entrar</a>
             </nav>
-            <button class="mobile-menu-button" aria-label="Abrir menu" aria-controls="mobile-menu"
-                aria-expanded="false">☰</button>
         </div>
-        <nav id="mobile-menu" class="mobile-nav" role="menu" aria-hidden="true">
-            <a href="#sobre" role="menuitem" tabindex="-1">Sobre nós</a>
-            <a href="#produtos" role="menuitem" tabindex="-1">Produtos</a>
-            <a href="#contato" role="menuitem" tabindex="-1">Contato</a>
-            <a href="#entrar" role="menuitem" tabindex="-1" class="btn-enter"
-                style="display:inline-block; margin-top: 16px;">Entrar</a>
-        </nav>
     </header>
 
     <main>
@@ -49,5 +44,60 @@
         </div>
     </main>
 </body>
+
+<section id="parallax-1"></section>
+
+
+<!-- ------------------------Sobre nós------------------------- -->
+
+<head>
+    <link href="./Font/Shrikhand/Shrikhand-Regular.ttf" rel="Shrikhand" />
+</head>
+
+<body>
+
+
+    <section class="about-section" role="region" aria-labelledby="sobre-nos-title">
+        <span class="material-icons paw-icons paw-top-left" aria-hidden="true">pets</span>
+        <span class="material-icons paw-icons paw-top-right" aria-hidden="true">pets</span>
+        <span class="material-icons paw-icons paw-bottom-left" aria-hidden="true">pets</span>
+        <span class="material-icons paw-icons paw-bottom-right" aria-hidden="true">pets</span>
+
+        <h2 class="about-title" id="sobre-nos-title">
+            Sobre <span class="highlight">nós</span>
+        </h2>
+        <p class="about-text">
+            A equipe da Ecopatinhas é formada por profissionais apaixonados por animais e comprometidos com a
+            sustentabilidade. Veterinários, groomers e especialistas em produtos naturais trabalham juntos para oferecer
+            um atendimento acolhedor e consciente, sempre priorizando o bem-estar dos pets e o cuidado com o meio
+            ambiente.
+        </p>
+    </section>
+
+    <section id="parallax-2"></section>
+    <!-- -------------------------- Nossos Produtos ------------------------>
+
+</head>
+<body>
+     <h2 class="about-title" id="sobre-nos-title">
+            Nossos <span class="highlight">produtos</span>
+    <div class="container">
+        <div class="product-section">
+            <img src="./img/Produtos de higiene.png" alt="Produtos de higiene">
+            <p>Nossos produtos de higiene são naturais, veganos e livres de substâncias tóxicas, oferecendo segurança para os animais e sustentabilidade para o planeta.</p>
+        </div>
+
+        <div class="product-section">
+            <img src="image2.jpg" alt="Brinquedos">
+            <p>Os brinquedos ajudam na saúde física e mental dos animais, promovendo diversão e aliviando o estresse. Os produtos de higiene, como shampoos, escovas e tapetes higiênicos, são fundamentais para manter os pets limpos, saudáveis e confortáveis.</p>
+        </div>
+
+        <div class="product-section">
+            <img src="image3.jpg" alt="Rações">
+            <p>Já as rações são selecionadas com cuidado para oferecer uma alimentação equilibrada e nutritiva, atendendo às necessidades específicas de cada animal.</p>
+        </div>
+    </div>
+</body>
 </html>
-----------------------
+
+<section id="parallax-3"></section>
