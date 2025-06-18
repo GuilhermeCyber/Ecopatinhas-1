@@ -4,22 +4,33 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Recursive";
+    src: url(./Font/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: "Shrikhand";
+    src: url(./Font/Shrikhand-Regular.ttf)
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Shrikhand';
     background-color: #fff;
     color: #000;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 150vh;
 }
 
-#sobre{
+#sobre {
     color: var(--branco);
     margin-bottom: 0;
-    background-color: var(--roxo-pixelV);
+    background-color: var(--branco);
     border-radius: 20px;
     padding: 10px 18px;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -35,11 +46,12 @@ header {
 }
 
 .header-container {
-    max-width: 1440px;
+    max-width: 1500px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
+    margin-right: 50px;
 }
 
 .nav-links {
@@ -67,10 +79,10 @@ header {
 
 .btn-enter:hover,
 .btn-enter:focus {
-    background-color: #ff7600;
+    background-color: #b95905;
 }
 
-main {
+.leo {
     flex-grow: 1;
     position: relative;
     display: flex;
@@ -117,9 +129,9 @@ main::before {
 }
 
 .logo-text {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Shrikhand';
     font-weight: 700;
-    font-style: italic;
+    font-style: Shrikhand;
     font-size: 2rem;
     color: black;
     user-select: none;
@@ -186,7 +198,7 @@ footer {
 #parallax-1 {
     height: 250px;
 
-   
+
     background: linear-gradient(rgba(0, 0, 0, 0.26)), url(./img/Paralax\ 1.png);
     background-attachment: fixed;
     background-size: 30%;
@@ -203,8 +215,8 @@ footer {
 
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #ff7600;
+    font-family: "Recursive";
+    background: #d55a00;
     color: #000;
     display: flex;
     flex-direction: column;
@@ -212,7 +224,7 @@ body {
 }
 
 .about-section {
-    background-color: #ff7600;
+    background-color: #d55a00;
 
     position: relative;
     max-width: 1200px;
@@ -223,6 +235,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+
 }
 
 .pattern-strip {
@@ -270,8 +283,8 @@ body {
 
 
 .paw-top-left {
-    top: 24px;
-    left: 24px;
+    top: 1px;
+    left: 700px;
 }
 
 .paw-top-right {
@@ -315,7 +328,7 @@ body {
 
 header,
 footer {
-    background: #ff7600;
+    background: #914300;
     color: white;
     text-align: center;
     padding: 16px 12px;
@@ -334,7 +347,7 @@ footer {
 #parallax-2 {
     height: 250px;
 
-   
+
     background: linear-gradient(rgba(0, 0, 0, 0.26)), url(./img/Paralax\ 1.png);
     background-attachment: fixed;
     background-size: 30%;
@@ -346,7 +359,7 @@ footer {
 
 body {
     background-color: #ff7600;
-    font-family: Arial, sans-serif;
+    font-family: Shrikhand;
     color: white;
 }
 
@@ -365,8 +378,9 @@ h1 {
 .product-section {
     background-color: rgba(98, 56, 17, 0.7);
     border-radius: 8px;
-    margin: 10px 30px;
-    padding: 15px;
+    margin: 20px 30px;
+    padding: 20px;
+    width: 300;
 }
 
 .product-section img {
@@ -377,7 +391,7 @@ h1 {
 }
 
 .product-section::after {
-    content: "";
+    content: "none";
     display: table;
     clear: both;
 }
@@ -385,9 +399,360 @@ h1 {
 #parallax-3 {
     height: 250px;
 
-   
+
     background: linear-gradient(rgba(0, 0, 0, 0.26)), url(./img/Paralax\ 1.png);
     background-attachment: fixed;
     background-size: 30%;
     margin-bottom: 120px;
+}
+
+/* ---------------------------------------Campo-de-cadastro------------------------------------ */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    background: #f37021;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header {
+    background-color: #be5b00;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+
+footer {
+    background-color: #be5b00;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.form-container {
+    background-color: #cd6f00;
+    padding: 40px 32px;
+    border-radius: 16px;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgb(0 0 0 / 0.25);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 24px;
+    background-color: #d6d6d6;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    outline-offset: 3px;
+    outline-color: transparent;
+    transition: outline-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline-color: #f37021;
+    background-color: #ededed;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 24px;
+    background-color: #d6d6d6;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    resize: vertical;
+    outline-offset: 3px;
+    outline-color: transparent;
+    transition: outline-color 0.3s ease;
+}
+
+textarea:focus {
+    outline-color: #f37021;
+    background-color: #ededed;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+button {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    border-radius: 24px;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black;
+    background-color: #f37021;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+button:hover,
+button:focus {
+    background-color: #d65c00;
+    outline: none;
+}
+
+
+@media (max-width: 767px) {
+    main {
+        padding: 20px 16px;
+    }
+
+    .form-container {
+        padding: 24px 16px;
+        border-radius: 12px;
+        box-shadow: none;
+        max-width: 100%;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .form-container {
+        max-width: 600px;
+    }
+}
+
+/* ---------------------------------- Roda-pé -------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #d55a00;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+    margin: 0 auto;
+    background: #be5b00;
+    padding: 32px 24px;
+    gap: 24px;
+
+}
+
+.footer-contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+
+}
+
+.footer-contato h3 {
+    font-weight: 900;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.footer-contato p {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.footer-redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.footer-redes h3 {
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.footer-social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.footer-social-link:hover {
+    color: #7a3e00;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.footer-button-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.btn-topo {
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 8px 32px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+}
+
+.btn-topo:hover {
+    background-color: #7a3e00;
+    color: white;
+    border-color: #7a3e00;
+}
+
+
+@media (max-width: 767px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .footer-contato,
+    .footer-redes,
+    .footer-social-links {
+        width: 100%;
+    }
+
+    .footer-social-links {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-social-link {
+        font-size: 0.875rem;
+    }
+
+    .footer-button-container {
+        margin-top: 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    footer {
+        padding: 48px 64px;
+    }
+}
+
+.teddy {
+    background-color: #7a3e00;
+    height: 300px;
+    width:-100px;
+    margin: 0%;
+    margin-left: -500;
+    margin-right: -100px;
+
+}
+#cachos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-section img{
+    height: 200px;
+}
+#ventilador p{
+    font-size: 23px;
+}
+#mesa{
+    font-size: 30px;
+}
+#cadeira{
+    font-size: 30px;
+}
+#mouse{
+    font-size: 30px;
 }
