@@ -391,7 +391,7 @@ h1 {
 }
 
 .product-section::after {
-    content: "none";
+    content: "";
     display: table;
     clear: both;
 }
